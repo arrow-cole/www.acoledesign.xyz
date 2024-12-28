@@ -1,0 +1,38 @@
+{
+    // Live Server Settings
+    "liveServer.settings.root": "/",
+    "liveServer.settings.port": 3030,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.ignoreFiles": [
+      ".vscode/**",
+      "**/*.scss",
+      "**/*.sass",
+      "**/*.ts"
+    ],
+    "liveServer.settings.host": "localhost",
+    "liveServer.settings.multiRootWorkspaceName": "Live Server",
+    "liveServer.settings.useLocalIp": false,
+    "liveServer.settings.openBrowser": true,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.browserPreview": false,
+    "liveServer.settings.NoBrowser": false,
+  
+    // Five Server Settings
+    "fiveServer.port": 5500,
+    "fiveServer.root": "/",
+    "fiveServer.open": true,
+    "fiveServer.browser": ["default"],
+    "fiveServer.ignore": [
+      ".vscode",
+      "node_modules",
+      "*.scss",
+      "*.sass",
+      "*.ts"
+    ],
+    "fiveServer.reload": true,
+    "fiveServer.highlight": true,
+    "fiveServer.useLocalIp": false
+  }
+  
