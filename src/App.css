@@ -1,0 +1,502 @@
+* {
+    margin:0;
+    padding: 0;
+}
+:target {
+  scroll-margin-top: 30vh;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: 	#eeeeee;
+}
+html {
+  scroll-behavior: smooth;  
+}
+/************ Navbar Css ************/
+.navbar, .navbar-cont {
+  display: flex;
+  position: sticky;
+  top: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+  background-color: #eeeeee;
+  z-index: 10;
+}
+
+.navbar-logo {
+  height: 3vh;
+  width: auto;
+  padding: 1vh;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;  
+  justify-content: center;   
+  align-items: center;  
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;   
+}
+
+.navbar-links a {
+  text-decoration: none;
+  padding: 0 2.5vh;
+  color: #3f3f3f;
+  font-size: 1.7vh;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007bff;  
+}
+
+/************ Banner Css ************/
+.banner {
+  position: relative;
+  width: auto;
+  height: 70vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.banner-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007BFF;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #007BFF;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+  margin-left: 14rem;
+  margin-top: 3.6rem;
+}
+
+.detail-button-banner{
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border-radius: 3vh;
+  border: transparent;
+  cursor: pointer;
+  transform: translateY(48vh);
+  margin-left: 11vh;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007BFF;
+  }
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 11px;
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+/************ Services Css ************/
+  .services-container {
+    margin-top: 1vh;
+    height: 50vh;
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative; 
+    align-items: center;
+  }
+  
+  .services-container::after {
+    content: "";
+    position: absolute;
+    bottom: -11px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: calc(100vw - 17px); 
+    height: 11px; 
+    background-color: white; 
+  }
+  
+  .services-title {
+    margin-top: 5vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: 	#666666;
+  }
+  
+  .services-grid {
+    transform: translateY(50%); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    text-align: center;
+    align-items: center;
+    margin: 3vh auto; 
+  }
+  
+  .service-card {
+    text-align: left;
+    flex: 1 1 calc(25% - 1.5rem); 
+    box-sizing: border-box;
+    min-width: 250px;
+    margin-bottom: 1.5rem; 
+  }
+  
+  .service-card-icon {
+    margin-bottom: 1rem;
+    max-width: 40px;
+  }
+  
+  .service-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: 	#666666;
+  }
+  
+  .service-card-description {
+    color: #979797;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card-link {
+    color: 	#eeeeee;
+    padding: 1vh;
+    text-decoration: none;
+    border-radius: 3vh;
+    background-color: #0088cc;
+  }
+  
+  .service-card-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 1024px) {
+    .service-card {
+      flex: 1 1 calc(50% - 1.5rem); 
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .service-card {
+      flex: 1 1 100%; 
+    }
+  }
+  
+/************ Works Css ************/
+.marquee-container{
+  border-top: 11px solid white;
+  border-bottom: 11px solid white;
+}
+.marquee-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 1.5vh; 
+}
+
+.marquee-image {
+  width: auto;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.marquee-item:hover .overlay {
+  opacity: 1;
+}
+
+.detail-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border-radius: 3vh;
+  border: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detail-button:hover {
+  background-color: #007BFF;
+}
+
+
+/************ Banner2 Css ************/
+
+.banner2 {
+  position: relative;
+  max-width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.banner-background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.banner-background2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/************ Comments Css ************/
+.comments-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 90%;  
+  margin: 0 auto;
+  flex-wrap: wrap;
+  height: 60vh;
+  position: relative;  
+  z-index: 1;  
+}
+
+.comments-container::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;  
+  left: 0;
+  width: 100%;   
+  height: 11px;
+  background-color: white;   
+  z-index: -1; 
+  transform: translateX(-5%); 
+  width: calc(100vw - 17px); 
+}
+
+.comment-card {
+  height: 50vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/************ References Css ************/
+.references-container{
+  position: relative;
+  max-width: 81.5%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin: 30px auto;
+}
+.references-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 2vh; 
+}
+
+.references-image {
+  width: auto;
+  height: 10vh;
+  margin-right: 4vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+/************ Contact Css ************/
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
+  
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 300px;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.contact-form-title,
+.contact-info-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #007aff;
+  outline: none;
+}
+
+.form-submit-button {
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 3vh;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit-button:hover {
+  background-color: #005bb5;
+}
+
+.contact-info-item {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/************ Footer Css ************/
+.footer {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;   
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #007aff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link img {
+  width: 24px;  
+  height: 24px;
+  transition: transform 0.3s ease;   
+}
+
+.footer-link:hover {
+  color: #005bb5;
+}
+
+.footer-link:hover img {
+  transform: scale(1.2);   
+}
+.konarworkslogo{
+  max-height: 3vh;
+  width: auto;
+  margin-top: 0.5vh;
+}
